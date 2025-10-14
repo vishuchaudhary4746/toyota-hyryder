@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Drive Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+
+  <section class="form-section py-5">
+    <div class="container">
+      <div class="form-wrapper mx-auto" style="max-width: 500px;">
+        <h2 class="form-heading fw-bold mb-2">Ready for a quieter, smarter city drive?</h2>
+        <p class="form-subtext text-muted mb-4">No charging. No range anxiety. Just drive the Hyryder.</p>
+
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="Your full name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+            <div class="input-group">
+              <span class="input-group-text">+91</span>
+              <input type="tel" class="form-control" placeholder="Your mobile number" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email Address <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" placeholder="Your email address" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">City <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="Your city" required>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Select Fuel Type <span class="text-danger">*</span></label>
+              <select class="form-select" required>
+                <option selected disabled>Select fuel type</option>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Select Variant <span class="text-danger">*</span></label>
+              <select class="form-select" required>
+                <option selected disabled>Select variant</option>
+                <option>Base</option>
+                <option>Mid</option>
+                <option>Top</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="form-note text-muted small mb-4">
+            By submitting this form, you agree to be contacted by a Toyota representative and consent to your data being processed for marketing purposes.
+          </p>
+
+          <button type="submit" class="btn btn-danger w-100 py-2 fw-bold d-flex align-items-center justify-content-center">
+            SUBMIT
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793L9.146 4.354a.5.5 0 1 1 .708-.708l4.5 4.5a.498.498 0 0 1 .146.35.498.498 0 0 1-.146.35l-4.5 4.5a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
