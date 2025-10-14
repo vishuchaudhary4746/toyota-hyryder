@@ -324,7 +324,7 @@ footer {
 }
 .contact-section .right{
     width: 50%;
-    max-width: 400px;
+    max-width: 500px;
 
     .form-wrapper{
         color: #fff;
@@ -337,6 +337,104 @@ footer {
             color: #EAEAEA;
         }
     }
+    form .form-label{
+        font-size: 14px;
+        margin-top: 20px;
+        font-weight: 500;
+    }
+
+    form .form-control{
+        background-color: none !important;
+        border: 1px solid #4A4A4A;
+        height: 40px;
+        border-radius: 8px;
+        color: #fff !important;
+        
+    }
+    .submit-button a{
+  background: #C31222;
+  color: #fff;
+  padding: 10px 32px;
+  height: 56px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+}
+.submit-button a:hover {
+  background-color: #DA291C;
+}
     
     
+}
+
+
+footer{
+  .footer {
+  background-color: #000;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.footer-sub {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-contact li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ccc;
+}
+
+.footer-logo {
+  max-height: 80px;
+}
+
+.footer-copy {
+  color: #ccc;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-logo {
+    margin-top: 1.5rem;
+  }
+}
+
 }
