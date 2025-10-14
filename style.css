@@ -326,54 +326,17 @@ footer {
     width: 50%;
     max-width: 400px;
 
-    .form-section {
-  color: #fff;
-}
-
-.form-label {
-  font-weight: 500;
-}
-
-.form-control,
-.form-select,
-.input-group-text {
-  background-color: #1c1c1c;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 0.95rem;
-}
-
-.form-control::placeholder {
-  color: #888;
-}
-
-.input-group-text {
-  color: #ccc;
-  border-right: none;
-}
-
-.form-control:focus,
-.form-select:focus {
-  border-color: #dc3545;
-  box-shadow: none;
-}
-
-.btn-danger {
-  background-color: #d11a1a;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.btn-danger:hover {
-  background-color: #b31515;
-}
-
-.form-note {
-  color: #aaa;
-  line-height: 1.4;
-}
+    .form-wrapper{
+        color: #fff;
+        text-align: start;
+        .h2{
+            font-size: 48px;
+        }
+        .form-subtext{
+            font-size: 18px;
+            color: #EAEAEA;
+        }
+    }
+    
+    
 }
