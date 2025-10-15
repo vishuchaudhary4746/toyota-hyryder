@@ -166,7 +166,8 @@ footer .copyright{
 .home-section02::before ,
 .home-section04::before ,
 .home-section05::before,
-.home-section03::before {
+.home-section03::before,
+.home-section06::before {
     
   content: "";
   position: absolute;
@@ -199,6 +200,16 @@ footer .copyright{
   height: 580px;
   box-sizing: border-box;
   /* If you want vertical stacking on small, use flex inside content, but not width override */
+}
+.home-section06 .swiper-specifications{
+  width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    text-align: center;
+    .swiper-wrapper{
+        width: 100%;
+    }
 }
 
 
@@ -568,6 +579,95 @@ footer{
 .btm-navigator .anc-opp:hover {
   background-color: #454545;
 }
+
+
+
+/* basic layout */
+.home-section06 { overflow: hidden; }
+.container { max-width: 75rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ensure slides show nicely */
+.specificationsSwiper .swiper-slide img { display:block; width:100%; height:auto; max-height:500px; object-fit:cover; }
+
+/* PAGINATION: target bullets that Swiper actually outputs
+   Swiper 3 outputs .swiper-pagination-bullet and .swiper-pagination-bullet-active
+   inside your custom pagination container .specifications-pagination.
+*/
+.specifications-pagination {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:1rem;
+  z-index:15;
+}
+
+/* target the generic Swiper bullet selectors inside our pagination container */
+.specifications-pagination .swiper-pagination-bullet {
+  width: 60px !important;
+  height: 40px !important;
+  opacity: 0.45;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform .22s ease, opacity .22s ease, border-color .22s ease;
+  background: none !important;
+  margin: 0 !important; /* Swiper adds margin — normalize if needed */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* if you used <span> inside bullet markup, target the <img> */
+.specifications-pagination .swiper-pagination-bullet img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* active bullet style (Swiper uses this class name) */
+.specifications-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.06);
+  border-color: #c31222;
+}
+
+/* custom nav icons */
+.specifications-button-prev img,
+.specifications-button-next img {
+  width:24px;
+  height:24px;
+  display:block;
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

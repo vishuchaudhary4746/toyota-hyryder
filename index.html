@@ -14,6 +14,7 @@
     <!-- ✅ Swiper CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/css/swiper.min.css">
 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -455,9 +456,37 @@
         </div>
     </section>
 
-  <section id="5" class="home-section06 page-bg">
-    <div><img src="images/section-6.png" alt=""></div>
-  </section>
+
+
+
+      <!-- HTML: note pagination element has class "specifications-pagination" -->
+<section class="home-section06 page-bg section-space">
+  <div class="container">
+    <div class="specificationsSwiper swiper-specifications">
+      <div class="swiper-wrapper">
+        <!-- slides: using <div class="swiper-slide"><img...></div> is safer -->
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2022/11/13/18/09/canyon-7589820_1280.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2022/11/02/22/33/autumn-7566201_1280.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2023/04/05/09/44/landscape-7901065_1280.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2020/09/04/16/18/mountains-5544365_1280.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2022/12/09/22/55/trees-7646226_1280.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2019/09/13/11/47/mountains-4473760_1280.jpg" alt=""></div>
+      </div>
+
+      <!-- custom pagination container -->
+      <div class="specifications-pagination"></div>
+
+      <!-- custom nav buttons (must match navigation selectors in JS) -->
+      <span class="specifications-button-prev"><img src="images/left-arr.svg" alt=""></span>
+      <span class="specifications-button-next"><img src="images/right-arr.svg" alt=""></span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 
 </div>
@@ -717,8 +746,47 @@ $(document).ready(function () {
 });
 </script>
 
+    
+<script>
+/* Swiper 3.x initialization */
+/* IMPORTANT: paginationBulletRender (v3) signature: function (swiper, index, className) { ... }
+   It must return HTML for each bullet. We'll render an <img> inside the bullet.
+*/
+var specificationsSwiper = new Swiper('.swiper-specifications', {
+  centeredSlides: true,
+  slidesPerView: 1,
+  loop: true,
+  grabCursor: true,
+  autoplay: 10000, // 10s
+  pagination: '.specifications-pagination',
+  paginationClickable: true,
+  paginationBulletRender: function (swiper, index, className) {
+    // thumbnails array - you can replace paths with local files (see below)
+    var thumbnails = [
+      "images/tab-img1.svg",
+      "https://cdn.pixabay.com/photo/2022/11/02/22/33/autumn-7566201_1280.jpg",
+      "https://cdn.pixabay.com/photo/2023/04/05/09/44/landscape-7901065_1280.jpg",
+      "https://cdn.pixabay.com/photo/2020/09/04/16/18/mountains-5544365_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/12/09/22/55/trees-7646226_1280.jpg",
+      "https://cdn.pixabay.com/photo/2019/09/13/11/47/mountains-4473760_1280.jpg"
+    ];
 
+    // If you use local images, provide relative paths, e.g. 'images/thumbs/1.jpg'
 
+    // Return markup for each bullet. className is something like 'swiper-pagination-bullet'
+    return '<span class="' + className + '"><img src="' + thumbnails[index] + '" alt="thumb-'+index+'"></span>';
+  },
+
+  nextButton: '.specifications-button-next',
+  prevButton: '.specifications-button-prev',
+
+  // responsive
+  breakpoints: {
+    640: { slidesPerView: 1.25, spaceBetween: 20 },
+    1024: { slidesPerView: 2, spaceBetween: 20 }
+  }
+});
+</script>
 
 
 </html>
