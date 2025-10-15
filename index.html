@@ -34,7 +34,7 @@
 </nav>
 
 <div class="sections">
-    <section id="" class="home-section01" >
+    <section id="" class="home-section01 head-space" >
         <div class="image-container"><img src="images/hero-banner.png" alt="">
             <div class="overlay-button"><a href="">ENQUIRE NOW  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,6 +46,7 @@
 <section id="1" class="home-section02 page-bg section-space" >
     
         <div class="container">
+          
             <div class="top text-white hm-info">
                 <h2>Exterior Highlights</h2>
                 <div class="sub-heading d-flex flex-row gap-2"><h4 class="bold">HY</h4> <h4 class="light">on Style</h4></div>
@@ -221,7 +222,7 @@
 
 
   <section id="2" class="home-section03 page-bg section-space">
-        <div class="container">
+        <div class="container ">
             <div class="top text-white d-flex text-align-end align-items-end flex-column hm-info">
                 <h2>Performance Highlights</h2>
                 <div class="sub-heading gap-2"><h4 class="bold">HY</h4> <h4 class="light"> on Performance</h4></div>
@@ -463,8 +464,8 @@
 
 <section class="contact-section d-flex flex-wrap">
     
-        <div class="left"><img src="images/contact-img1.png" alt=""></div>
-        <div class="right d-flex align-items-center">
+        <div class="left order-1 order-md-0"><img src="images/contact-img1.png" alt=""></div>
+        <div class="right d-flex align-items-center order-0 order-md-1">
             <div class="form-wrapper mx-auto " >
         <h2 class="form-heading fw-bold mb-2">Ready for a quieter, smarter city drive?</h2>
         <p class="form-subtext p-0 m-0">No charging. No range anxiety. Just drive the Hyryder.</p>
@@ -524,7 +525,7 @@
             By submitting this form, you agree to be contacted by a Toyota representative and consent to your data being processed for marketing purposes.
           </p>
 
-          <div class="submit-button"><a href="">ENQUIRE NOW  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <div class="submit-button"><a href="">SUBMIT  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a></div>
         </form>
@@ -536,10 +537,10 @@
 <!-- Footer Section -->
 <footer class="footer py-5 page-bg">
   <div class="container">
-    <div class="row  justify-content-between ">
+    <div class="row  justify-content-between d-flex">
       
       <!-- Talk to Toyota -->
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-white">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-white order-1 order-md-0">
         <h5 class="footer-title">Talk to Toyota</h5>
         <p class="footer-sub">24x7 Call us for enquiry/ feedback at</p>
         <ul class="list-unstyled footer-contact">
@@ -550,43 +551,46 @@
       </div>
 
       <!-- Social Links -->
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-align-start text-white align-items-top">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-align-start text-white align-items-top order-0 order-md-1">
         <h5 class="footer-title">Follow Us On</h5>
         <div class="footer-social">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-twitter-x"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><img src="images/fb.svg" alt=""></a>
+          <a href="#"><img src="images/insta.svg" alt=""></a>
+          <a href="#"><img src="images/youtube.svg" alt=""></a>
+          <a href="#"><img src="images/twitter.svg" alt=""></a>
+          <a href="#"><img src="images/linkedin.svg" alt=""></a>
         </div>
       </div>
 
       <!-- Logo -->
-      <div class="col-lg-4 text-lg-end text-md-center">
+      <div class="col-lg-4 text-lg-end text-md-center order-3 order-md-2 logo-div">
         <img src="images/footer-logo.png" alt="Toyota Logo" class="img-fluid footer-logo">
       </div>
-    </div>
 
-    <!-- Copyright -->
-    <div class="row mt-4">
+      <!-- Copyright -->
+    <div class=" copyright order-2 order-md-3">
       <div class="col text-center">
         <p class="footer-copy mb-0">
           Copyright © Toyota — Urban Cruiser Hyryder. All Rights Reserved.
         </p>
       </div>
     </div>
+    </div>
+
+    
   </div>
 
 
-  <div class="btm-navigator">
+  
+</footer>
+
+<div class="btm-navigator">
     <a class="anc-opp" href="">DOWNLOAD BROCHURE</a>
         <a class="anc" href="">ENQUIRE NOW <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
     
   </div>
-</footer>
-
 
 
 
@@ -678,7 +682,7 @@ $(document).ready(function () {
         767: {
           slidesPerView: 1,
           slidesPerGroup: 1,
-          spaceBetween: 10
+          spaceBetween: 20
         }
       },
 
