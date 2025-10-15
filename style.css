@@ -191,14 +191,25 @@ footer {
     .swiper-wrapper{
         width: 100%;
     }
-    .swiper-slide{
-        width: 50% !important;
-        height: auto !important;
-        padding: 20px;
-    }
+    .swiper-slide {
+  height: auto ;
+  min-height: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  /* If you want vertical stacking on small, use flex inside content, but not width override */
+}
+
+
+.swiper-slide .num-div p{
+  line-height: 60px;
+  padding-right: 10px;
+}
+
     img{
       width: 100%;
       height: auto;
+      display: block;
+      object-fit: cover;
     }
     .num-div p{
         color: #C0C0C0 !important;
@@ -220,11 +231,17 @@ footer {
       background-image: none !important;
       background-color: #3C3C3C;
       border-radius: 50%;
-      height: auto;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
     .navigation-buttons{
       position: absolute;
-      bottom: 20px;
+      bottom: 25px;
+      left: 50%;
       width: 100%;
       display: flex !important;
       flex-direction: row !important;
@@ -232,13 +249,20 @@ footer {
         align-items: center;
       gap: 20px !important;
       z-index: 5;
+      transform: translateX(-50%);
     }
     .swiper-button-prev{
-        left: 85% ;
+        left: 80% ;
     }
     .swiper-button-next{
         right: 8%;
     }
+    .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.swiper-pagination-bullet{
+  display: none ;
+}
 }
 .home-section02 .swiper-pagination-bullet{
   width: 12px;
@@ -265,6 +289,14 @@ footer {
 .home-section03 .btm .right{
     width: 50%;
     height: auto;
+}
+.home-section03 .btm .right img{
+  width: 100%;
+    height: auto;
+    
+    padding-left: 60px;
+    padding-top: 50px
+
 }
 .home-section03 .btm img{
     width: 100%;
@@ -298,10 +330,14 @@ footer {
 
 
 @media (max-width: 600px) {
+  
     .swiper-slide{
         width: 100% !important;
         height: auto !important;
         padding: 20px;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        display: none !important;
     }
 }
 
@@ -327,10 +363,12 @@ footer {
     max-width: 500px;
 
     .form-wrapper{
+      padding: 0%;
+      margin: 0%;
         color: #fff;
         text-align: start;
-        .h2{
-            font-size: 48px;
+        h2{
+            font-size: clamp(32px , 3vw , 48px);
         }
         .form-subtext{
             font-size: 18px;
@@ -339,23 +377,30 @@ footer {
     }
     form .form-label{
         font-size: 14px;
-        margin-top: 20px;
+        margin-top: 5px;
         font-weight: 500;
     }
+    .category .form-control::placeholder,
+    .category .drop-down .form-select{
+  color: #868686; /* change this to your desired color */
+  opacity: 1; /* ensure it’s fully visible */
+  background-color: #242424;
+}
 
-    form .form-control{
-        background-color: none !important;
-        border: 1px solid #4A4A4A;
-        height: 40px;
+    form .form-control,
+    form .input-group-text{
+        background-color: #242424;
+        border: 1px solid #868686;
+        height: 35px;
         border-radius: 8px;
-        color: #fff !important;
+        color: #868686;
         
     }
     .submit-button a{
   background: #C31222;
   color: #fff;
   padding: 10px 32px;
-  height: 56px;
+  height: 40px;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -419,6 +464,8 @@ footer{
 
 .footer-logo {
   max-height: 80px;
+  margin-right: 10px;
+  margin-top: 60px;
 }
 
 .footer-copy {
@@ -436,5 +483,79 @@ footer{
     margin-top: 1.5rem;
   }
 }
+.contact-section .right,
+.contact-section .left{
+    width: 100%;
+    max-width: none;
 
+}}
+
+@media (max-width: 680px){
+  .contact-section .left,
+  .contact-section .right{
+      width: 100%;
+      max-width: none;
+  }
+}
+
+.home-section06 img{
+  width: 100%;
+    height: auto;
+}
+
+
+.btm-navigator{
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btm-navigator  .anc{
+  
+  background: #C31222;
+  color: #fff;
+  padding: 10px 32px;
+  height: 56px;
+  width: 633px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+
+
+}
+.btm-navigator  .anc:hover {
+  background-color: #DA291C;
+}
+.btm-navigator .anc-opp{
+  
+  background: #151515;
+  color: #D6D6D6;
+  border: 1px solid #454545;
+  padding: 10px 32px;
+  height: 56px;
+  width: 633px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+
+
+}
+.btm-navigator .anc-opp:hover {
+  background-color: #454545;
 }

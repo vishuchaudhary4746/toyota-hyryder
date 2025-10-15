@@ -1,74 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f6f6f6;
-}
-
-/* Nav wrapper: horizontal scroll */
-.nav-wrapper {
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-.nav-wrapper::-webkit-scrollbar { display: none; }
-
-/* Nav bar */
-ul {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  border-radius: 30px;
-  box-shadow: 0 9px 30px rgba(0,0,0,0.13);
-  padding: 8px 10px;
-}
-
-ul li {
-  list-style: none;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-ul li a {
-  display: block;
-  width: 140px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #5e5e62;
-  font-size: 18px;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  border-radius: 30px;
-  transition: all 0.4s ease;
-}
-
-ul li.active a {
-  background-image: linear-gradient(117deg, #838386, #26262a);
-  font-weight: 700;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Sliding box inside nav */
-.slide {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  height: 50px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.07);
-  transition: all 0.4s ease;
-  z-index: -1;
-  opacity: 0;
-}
+.swiper-wrapper{
+        width: 100%;
+    }
+    .swiper-slide{
+        width: 50% !important;
+        height: auto !important;
+        padding: 20px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .num-div p{
+        color: #C0C0C0 !important;
+        font-size: 80px;
+    }
+    .text-div h3{
+        font-size: 32px;
+        text-align: start;
+    }
+    .text-div p{
+        font-size: 16px;
+        color: #EAEAEA;
+        text-align: start;
+    }
+    .btm-01 img{
+        width: 100%;
+    }
+    .swiper-button-prev, .swiper-button-next{
+      background-image: none !important;
+      background-color: #3C3C3C;
+      border-radius: 50%;
+      height: auto;
+    }
+    .navigation-buttons{
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex !important;
+      flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center;
+      gap: 20px !important;
+      z-index: 5;
+    }
+    .swiper-button-prev{
+        left: 85% ;
+    }
+    .swiper-button-next{
+        right: 8%;
+    }
