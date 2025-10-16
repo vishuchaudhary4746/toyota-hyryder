@@ -39,7 +39,10 @@
 	}
 }
 
-
+section{
+  width: 100%;
+  overflow: hidden;
+}
 
 .body{
     background-color: #010101;
@@ -175,11 +178,19 @@ footer .copyright{
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('images/section2-bg.png') center/cover no-repeat;
   opacity: 1; /* 50% transparent */
   z-index: 1;
 }
-
+.home-section02::before{background: url('images/section2-bg.png') center/cover no-repeat;
+}
+.home-section03::before{background: url('images/section03-bg.png') center/cover no-repeat;
+}
+.home-section04::before{background: url('images/section04-bg.png') center/cover no-repeat;
+}
+.home-section05::before{background: url('images/section05-bg.png') center/cover no-repeat;
+}
+.home-section06::before{background: url('images/section06-bg.png') center/cover no-repeat;
+}
 /* Make sure your section content is above the pseudo-element */
 .page-bg > * {
   position: relative;
@@ -187,7 +198,8 @@ footer .copyright{
 }
 .home-section02 .swiper-container,
 .home-section04 .swiper-container ,
-.home-section05 .swiper-container{
+.home-section05 .swiper-container,
+.home-section03 .swiper-container{
     width: 100%;
     height: 100%;
     padding-bottom: 100px;
@@ -201,6 +213,7 @@ footer .copyright{
   box-sizing: border-box;
   /* If you want vertical stacking on small, use flex inside content, but not width override */
 }
+
 .home-section06 .swiper-specifications{
   width: 100%;
     height: 100%;
@@ -244,8 +257,9 @@ footer .copyright{
       background-image: none !important;
       background-color: #3C3C3C;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -292,6 +306,15 @@ footer .copyright{
     flex-direction: row;
     text-align: end;
 }
+.home-section03 .top p{
+  font-size: 18px;
+  font-weight: regular;
+  color: #EAEAEA !important;
+}
+.home-section03 .top span{
+  font-size: 14px;
+  color: #EAEAEA !important;
+}
 
 .home-section03 .btm{
     display: flex;
@@ -322,7 +345,9 @@ footer .copyright{
     font-weight: 300;
 }
 .home-section03 .left a,
-.home-section05 .safety-button a{
+.home-section05 .safety-button a,
+.home-section06 .top .head a,
+.home-section03 .technical-spec-button a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -411,7 +436,7 @@ footer{
         color: #868686;
         
     }
-    .submit-button a{
+    .submit-button{
   background: #C31222;
   color: #fff;
   padding: 10px 32px;
@@ -425,9 +450,18 @@ footer{
   text-align: center;
   justify-content: center;
   gap: 15px;
+  width: 100%;
 }
-.submit-button a:hover {
+.submit-button:hover {
   background-color: #DA291C;
+}
+.row.category{
+  justify-content: space-between;
+} 
+.row.category > div{
+  padding: 0%;
+  width: 48%;
+  
 }
     
     
@@ -525,7 +559,7 @@ footer{
 
 .btm-navigator{
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -582,13 +616,16 @@ footer{
 
 
 
-/* basic layout */
-.home-section06 { overflow: hidden; }
-.container { max-width: 75rem; margin: 0 auto; padding: 0 1.25rem; }
-
-/* ensure slides show nicely */
-.specificationsSwiper .swiper-slide img { display:block; width:100%; height:auto; max-height:500px; object-fit:cover; }
-
+.home-section06 .specificationsSwiper{
+  width: 100%;
+}
+.home-section06 .specificationsSwiper .swiper-slide{
+  display: flex;
+  justify-content: center;
+  img{
+    max-width: 1000px;
+  }
+}
 /* PAGINATION: target bullets that Swiper actually outputs
    Swiper 3 outputs .swiper-pagination-bullet and .swiper-pagination-bullet-active
    inside your custom pagination container .specifications-pagination.
@@ -596,16 +633,17 @@ footer{
 .specifications-pagination {
   display:flex;
   justify-content:center;
-  gap:12px;
+  gap:20px;
   margin-top:1rem;
   z-index:15;
+  padding: 20px 90px;
 }
 
 /* target the generic Swiper bullet selectors inside our pagination container */
 .specifications-pagination .swiper-pagination-bullet {
-  width: 60px !important;
-  height: 40px !important;
-  opacity: 0.45;
+  width:20% ;
+  height: auto ;
+  opacity: 0.6;
   border-radius: 6px;
   overflow: hidden;
   border: 2px solid transparent;
@@ -620,22 +658,35 @@ footer{
 .specifications-pagination .swiper-pagination-bullet img {
   width:100%;
   height:100%;
-  object-fit:cover;
-  display:block;
 }
 
 /* active bullet style (Swiper uses this class name) */
 .specifications-pagination .swiper-pagination-bullet-active {
   opacity: 1;
-  transform: scale(1.06);
-  border-color: #c31222;
+  transform: scale(1.1);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* custom nav icons */
+.specifications-button-next,
+.specifications-button-prev{
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
 .specifications-button-prev img,
 .specifications-button-next img {
-  width:24px;
-  height:24px;
   display:block;
   cursor:pointer;
 }
@@ -643,6 +694,41 @@ footer{
 
 
 
+.specifications-navigation-div{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  gap: 0% !important;
+  z-index: 5;
+  transform: translateX(-50%);
+  .swiper-button-next{
+    background-image: none !important;
+  }
+  .swiper-button-prev{
+    background-image: none !important;
+  }
+}
+.specifications-button-prev,
+.specifications-button-next{
+  background-color: #3C3C3C;
+  border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+}
 
 
 
@@ -659,11 +745,36 @@ footer{
 
 
 
+.home-section06 .top{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.home-section06 .top .color-mode{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.home-section06 .top .color-mode a{
+  text-decoration: none;
+  color: #BABABA;
+  font-size: 20px;
+  font-weight: 300;
+}
 
+/* Smooth zoom animation on active slide */
+.swiper-specifications .swiper-slide img {
+  transform: scale(0.5); /* default state — slightly smaller */
+  transition: transform 0.3s ease-in-out; /* slow zoom effect */
+}
 
-
-
-
+/* When slide becomes active, zoom slowly */
+.swiper-specifications .swiper-slide-active img {
+  transform: scale(1.01); /* zoom in slowly */
+  transition: transform 0.4s ease-in-out; /* match slide duration */
+}
 
 
 
@@ -703,7 +814,8 @@ footer{
   }
   .home-section02 .swiper-container,
 .home-section04 .swiper-container ,
-.home-section05 .swiper-container{
+.home-section05 .swiper-container,
+.home-section03 .swiper-container{
     padding-bottom: 0px;
 }
 .contact-section .right{
@@ -715,15 +827,15 @@ footer .logo-div{
 }
 footer .footer-logo{
   width: 240px;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 80px;
 }
 footer .footer-copy{
   text-align: start;
 }
 .btm-navigator{
   gap: 10px;
-  padding: 0px 10px;
+  padding: 10px 10px;
 }
 .btm-navigator .anc,
 .btm-navigator .anc-opp{
@@ -740,7 +852,82 @@ footer .footer-copy{
 footer .copyright{
   margin-bottom: none !important;
 }
+nav .center-div{
+  display: flex;
+  flex-direction: row;
+  top: 50px !important;
+  a{
+    font-size: 12px;
+  }
+}
+.section-space {
+  padding: 32px 16px;
+}
+.swiper-container{
+  padding: 15px 0px !important;
+}
 
 
+.center-div {}
 
+body nav {
+    background: #000;
+    border: 0px solid #fff;
+    display: flow;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+nav ul .center-div {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    top: 30px !important;
+    position: relative !important;
+    border: 0;
+    background: #000;
+    justify-content: center;
+}
+
+body nav ul.d-flex {
+    margin: 0;
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 0;
+    border: 0;
+}
+.btm-navigator{
+  background: #000;
+}
+.home-section06 .top{
+  .color-mode a{
+    font-size: 16px;
+  }
+
+}
+.home-section06 .specificationsSwiper
+ {
+    width: 100%;
+    padding-top: 50px;
+}
+.home-section06 .container .top .head a{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+}
+nav{
+  background: #000;
+  height: 70px;
+}
+
+
+.color-mode a.active {
+  color: #fff !important;
+  font-weight: 400 !important;
+}
+.btm-navigator{
+  background: #000;
 }

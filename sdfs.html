@@ -1,0 +1,96 @@
+      <!-- HTML: note pagination element has class "specifications-pagination" -->
+<section id="5" class="home-section06 page-bg section-space">
+  <div class="container position-relative">
+    <div class="top text-white hm-info">
+                <div class="head d-flex flex-row align-items-end gap-3">
+                  <h2>HY on Customisation</h2>
+                  <a href="">ENQUIRE FOR SPECIFICATIONS <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#C31222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                </div>
+                
+                <div class="color-mode"><a href="">Mono tone</a>
+                <a href="">Dual tone</a></div>  
+                </div>
+                
+            
+    <div class="specificationsSwiper swiper-specifications position-relative">
+      <div class="swiper-wrapper">
+        <!-- slides: using <div class="swiper-slide"><img...></div> is safer -->
+        <div class="swiper-slide"><img src="images/spec-img1.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/spec-img2.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/spec-img3.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/spec-img4.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/spec-img5.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/spec-img6.png" alt=""></div>
+      </div>
+
+      <!-- custom pagination container -->
+      <div class="specifications-pagination"></div>
+
+      <!-- custom nav buttons (must match navigation selectors in JS) -->
+       <div class="specifications-navigation-div">
+          <span class="swiper-button-prev specifications-button-prev"><img src="images/left-arr.svg" alt=""></span>
+          <span class="swiper-button-next specifications-button-next"><img src="images/right-arr.svg" alt=""></span>
+       </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var specificationsSwiper = new Swiper('.swiper-specifications', {
+  centeredSlides: true,
+  slidesPerView: 1.8,
+  loop: false,
+  grabCursor: true,
+
+  // ✅ Swiper 3.x syntax for pagination
+  pagination: '.specifications-pagination',
+  paginationClickable: true,
+
+  // ✅ Swiper 3.x method: paginationBulletRender (not renderBullet)
+  paginationBulletRender: function (index, className) {
+    // Swiper v3 passes only (index, className)
+    // The swiper instance is available via 'this'
+    var thumbnails = [
+      "images/tab-img1.png",
+      "images/tab-img2.png",
+      "images/tab-img3.png",
+      "images/tab-img4.png",
+      "images/tab-img5.png",
+      "images/tab-img6.png"
+    ];
+
+    // Fallback if thumbnails array shorter than slides
+    var thumb = thumbnails[index] ? thumbnails[index] : thumbnails[0];
+
+    // Return bullet markup
+    return '<span class="' + className + '"><img src="' + thumb + '" alt="thumb-' + index + '"></span>';
+  },
+
+  // ✅ Navigation in Swiper 3.x uses nextButton / prevButton (not navigation:{})
+  nextButton: '.specifications-button-next',
+  prevButton: '.specifications-button-prev',
+
+  // ✅ Responsive breakpoints (supported in 3.3.0)
+  breakpoints: {
+    640: { slidesPerView: 1.25, spaceBetween: 20 },
+    1024: { slidesPerView: 1, spaceBetween: 200 }
+  }
+});
+</script>
